@@ -1,0 +1,151 @@
+:root {
+  --background-night: #1a1b26;
+  --background-storm: #24283b;
+  --background-alt: #414868;
+
+  --foreground: #c0caf5;
+  --foreground-alt: #a9b1d6;
+
+  --special-a: #f7768e;
+  --special-b: #ff9e64;
+  --special-c: #73daca;
+  --special-d: #2ac3de;
+  --special-e: #7aa2f7;
+
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  color: var(--foreground);
+}
+
+body {
+  background-color: var(--background-night);
+  overflow-y: hidden;
+}
+
+a {
+  color: var(--special-a);
+}
+
+#color-special-a {
+  color: var(--special-a);
+}
+#color-special-b {
+  color: var(--special-b);
+}
+#color-special-c {
+  color: var(--special-c);
+}
+#color-special-d {
+  color: var(--special-d);
+}
+#color-special-e {
+  color: var(--special-e);
+}
+
+.center {
+  justify-content: center;
+}
+
+.header-bar {
+  width: 12em;
+  height: 2em;
+  text-align: center;
+  line-height: 0px;
+  margin-bottom: 1em;
+  background-color: var(--background-alt);
+
+  transform: rotate(-8deg);
+  margin-bottom: 10px;
+  z-index: 1;
+
+  position: absolute;
+  top: -2em;
+  left: -2em;
+}
+
+.content-container {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  min-width:  var(--miw);
+  min-height: var(--mih);
+  max-width: var(--maw);
+  max-height: var(--mah);
+}
+
+.content-holder {
+  background-color: var(--background-storm);
+  width:  48em;
+  height: 25em;
+
+
+  transform: rotate(1deg) skew(-2deg);
+}
+
+.content {
+  padding: 4px 4px 24px 32px;
+  transform: rotate(-1deg) skew(2deg);
+}
+
+.navigator {
+  margin-top: 24px;
+  width:  48em;
+  height: 3em;
+  display: inline-flex;
+  justify-content: space-around;
+}
+
+.navi-item {
+  background-color: var(--background-storm);
+  max-width: 6em;
+  max-height: 3em;
+  padding-left: 1em;
+  padding-right: 1em;
+  transition: 0.2s;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+}
+
+#n0 {
+  transform: skew(-12deg) rotate(4deg);
+}
+#n1 {
+  transform: skew(4deg) rotate(12deg);
+}
+#n2 {
+  transform: skew(6deg) rotate(-18deg);
+}
+#n3 {
+  transform: skew(-7deg) rotate(-4deg);
+}
+#n4 {
+  transform: skew(-12deg) rotate(3deg);
+}
+
+.navi-item:hover {
+  background-color: var(--background-alt);
+}
+
+.page {
+  opacity: 0;
+  transition: 0.3s ease;
+  pointer-events: none;
+  position: absolute;
+}
+
+.page.active {
+  opacity: 1;
+  pointer-events: all;
+}
