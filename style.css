@@ -52,20 +52,29 @@ a {
 }
 
 .header-bar {
-  width: 12em;
+  width: 14em;
   height: 2em;
   text-align: center;
-  line-height: 0px;
-  margin-bottom: 1em;
   background-color: var(--background-alt);
 
-  transform: rotate(-8deg);
   margin-bottom: 10px;
   z-index: 1;
+}
 
+.header-left {
+  transform: rotate(-8deg);
   position: absolute;
   top: -2em;
   left: -2em;
+  line-height: 0px;
+}
+
+.header-right {
+  transform: rotate(6deg);
+  position: absolute;
+  top: -1em;
+  right: -4em;
+  padding-top: 5px;
 }
 
 .content-container {
@@ -149,3 +158,4 @@ a {
   opacity: 1;
   pointer-events: all;
 }
+
