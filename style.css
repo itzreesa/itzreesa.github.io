@@ -52,7 +52,7 @@ a {
 }
 
 .header-bar {
-  width: 14em;
+  min-width: 14em;
   height: 2em;
   text-align: center;
   background-color: var(--background-alt);
@@ -82,17 +82,12 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  min-width:  var(--miw);
-  min-height: var(--mih);
-  max-width: var(--maw);
-  max-height: var(--mah);
 }
 
 .content-holder {
   background-color: var(--background-storm);
-  width:  48em;
-  height: 25em;
-
+  min-width:  48em;
+  min-height: 25em;
 
   transform: rotate(1deg) skew(-2deg);
 }
@@ -159,3 +154,104 @@ a {
   pointer-events: all;
 }
 
+@media only screen and (max-width: 800px) {
+    body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  .content-holder {
+    min-width: 600px;
+    min-height: 550px;
+    transform: rotate(0.25deg) skew(-0.5deg);
+  }
+
+  .content {
+    padding: 6px 6px 6px 6px;
+    transform: rotate(-0.25deg) skew(0.5deg);
+  }
+
+  .navigator {
+    position: absolute;
+    bottom: -14em;
+    width:  38em;
+    height: 10em;
+  }
+
+  .header-left {
+    top: -9em;
+    left: 2em;
+  }
+  .header-right {
+    top: -6em;
+    right: 2em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  .content-holder {
+    min-width: 480px;
+    min-height: 550px;
+    transform: rotate(0.25deg) skew(-0.5deg);
+  }
+
+  .content {
+    padding: 6px 6px 6px 6px;
+    transform: rotate(-0.25deg) skew(0.5deg);
+  }
+
+  .navigator {
+    position: absolute;
+    bottom: -14em;
+    width:  32em;
+    height: 10em;
+  }
+
+  .header-left {
+    top: -9em;
+    left: 2em;
+  }
+  .header-right {
+    top: -6em;
+    right: 2em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  .content-holder {
+    min-width: 380px;
+    min-height: 550px;
+    transform: rotate(0.25deg) skew(-0.5deg);
+  }
+
+  .content {
+    padding: 6px 6px 6px 6px;
+    transform: rotate(-0.25deg) skew(0.5deg);
+  }
+
+  .navigator {
+    position: absolute;
+    bottom: -14em;
+    width:  24em;
+    height: 10em;
+  }
+
+  .header-left {
+    top: -9em;
+    left: 2em;
+  }
+  .header-right {
+    top: -6em;
+    right: 2em;
+  }
+}
