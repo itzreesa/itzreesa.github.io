@@ -1,0 +1,173 @@
+/* meowta */
+
+.meta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8rem;
+}
+
+p.meta {
+  font-weight: 800;
+  font-size: 5em;
+  text-align: center;
+  letter-spacing: 0em;
+  margin: 0.5em 0.5em 0.25em 0.5em;
+  transition: letter-spacing 0.6s ease;
+}
+
+p.meta:hover {
+  letter-spacing: 0.4em;
+}
+
+/* meowtent */
+
+.content-center {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.content-container {
+  display: grid;
+  gap: 2rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+
+  max-width: 800px;
+}
+
+.content-card {
+  background-color: var(--background-light);
+  border-radius: 6px;
+  padding: 0.4rem 1rem 0.4rem 1rem;
+
+  justify-self: center;
+  align-self: center;
+
+  transition: 0.25s ease;
+
+  box-shadow: 0.25em 0.25em #d9b8c455;
+}
+
+.content-card p {
+  font-size: 1.15rem;
+  text-align: center;
+}
+
+.padded {
+  margin: 0.6em 0.5em 0.6em 0.5em;
+}
+
+/* special */
+.special-a {
+  background-color: var(--accent-a);
+  box-shadow: 0.25em 0.25em #d9b8c4AA;
+}
+.special-b {
+  background-color: var(--accent-b);
+  box-shadow: 0.25em 0.25em #703D57AA;
+}
+
+.special-c {
+  background-color: var(--foreground);
+  box-shadow: 0.25em 0.25em #703D57AA;
+}
+.special-c p {
+  color: var(--background-light);
+}
+.special-c a {
+  color: var(--background-light);
+}
+
+/* card animations? */
+.content-card:hover {
+  box-shadow: 0.6em 0.6em #957186AA;
+  transform: rotateZ(2deg);
+  background-color: var(--accent-a);
+}
+.content-card:hover p {
+  color: var(--foreground);
+}.content-card:hover a {
+  color: var(--foreground);
+}
+
+.animate-alt-a:hover {
+  box-shadow: 0.6em 0.6em #703D57AA;
+  background-color: var(--foreground);
+}
+.animate-alt-a:hover p {
+  color: var(--background-light);
+}.animate-alt-a:hover a {
+  color: var(--background-light);
+}
+
+.animate-alt-b:hover {
+  box-shadow: 0.6em 0.6em #703D57AA;
+  background-color: var(--accent-b);
+}
+.animate-alt-b:hover p {
+  color: var(--background-light);
+}.animate-alt-b:hover a {
+  color: var(--background-light);
+}
+
+
+/* responsive my ass */
+@media screen and (max-width: 600px) {
+  .content-container {
+    grid-template-columns: 1fr;
+  }
+  .dirty {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .content-container {
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+  }
+  .dirty {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .content-container {
+    grid-template-columns: repeat(3, minmax(min-content, max-content));
+  }
+  .dirty {
+    display: initial;
+  }
+}
+
+/* meowter */
+footer {
+  opacity: 0.75;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(64, 42, 44, 0.25);
+  text-align: center;
+  justify-content: center;
+  transition: 0.25s ease;
+}
+
+footer:hover {
+  opacity: 1;
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+footer div p {
+  color: var(--accent-b);
+}
+
+.wall {
+  height: 12em;
+}

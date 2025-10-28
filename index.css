@@ -1,0 +1,53 @@
+:root {
+  --background: #241715;
+  --background-light: #402A2C;
+  --foreground: #d9b8c4;
+  --accent-a: #703D57;
+  --accent-b: #957186;
+
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  color: var(--foreground);
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+:root::-webkit-scrollbar {
+  display: none;
+}
+
+#back-background {
+  background-color: var(--background);
+}
+#back-background-light {
+  background-color: var(--background-light);
+}
+#front-foreground {
+  color: var(--foreground);
+}
+#front-accent-a {
+  color: var(--accent-a);
+}
+#front-accent-b {
+  color: var(--accent-b);
+}
+
+/* big "boy" css time */
+
+body {
+  background-color: var(--background);
+  /*background-image: linear-gradient(to bottom, var(--background), var(--background-light));*/
+}
+
+p {
+  color: var(--foreground);
+}
+a {
+  color: var(--foreground);
+}
