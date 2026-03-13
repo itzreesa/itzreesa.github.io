@@ -1,0 +1,374 @@
+:root {
+  font-family: "Overpass Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--background);
+
+  color-scheme: dark;
+
+  display: flex;
+  justify-content: center;
+
+  padding-bottom: 5rem;
+  
+  --nav-bar-top-position: 1rem;
+  --nav-bar-top-padding: 0.15rem;
+
+  --boreder-radius: 0.42rem;
+  
+  @media screen and (max-width: 40rem) {
+    --nav-bar-top-position: 0.25rem; 
+    --nav-bar-top-padding: 0.5rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-alt);
+  transition: 0.36s ease;
+
+  &:hover:not(.ignore-hover) {
+    text-decoration: underline;
+  }  
+} 
+
+nav {
+  position: fixed;
+  width: 80%;
+  top: var(--nav-bar-top-position);
+  justify-self: center;
+  height: fit-content;
+  
+  border-radius: var(--boreder-radius);
+
+  padding-bottom: 1em;
+  background-color: var(--background-alt);
+  
+  box-shadow: 4px 4px var(--surface);
+
+  display: grid;
+  justify-items: stretch;
+  align-items: center;
+
+  margin: 0;
+  padding: var(--nav-bar-top-padding) 0 var(--nav-bar-top-padding) 0;
+    
+  ul {
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-around;
+    width: 100%;
+    
+    margin: 0;
+    padding: var(--nav-bar-top-padding);
+
+    li {
+      display: block;
+      list-style-type: none;
+      font-weight: 600;
+    }
+  }
+
+  .selected {
+    color: var(--accent);
+  }
+  
+  @media screen and (max-width: 40rem) {
+    position: absolute;
+    padding: var(--nav-bar-top-padding);
+    top: 0;
+    width: 100%;
+  }
+}
+
+.content {
+  margin-top: calc(var(--nav-bar-top-position) + var(--nav-bar-top-padding) + 1rem);
+
+  width: 50rem;
+  padding: 1rem 1rem 1rem 1rem;
+
+  p {
+    color: var(--foreground);
+  }
+
+  h1 {
+    color: var(--accent);
+  }
+  
+  h2 {
+    color: var(--accent);
+    margin-bottom: -0.6rem;
+  }
+  
+  h3 {
+    color: var(--accent);
+  }
+
+  h6 {
+    color: var(--foreground);
+    margin-top: -1rem;
+    margin-bottom: 0;
+    opacity: 0.25;
+    font-weight: 300;
+  }
+  
+  ul {
+    color: var(--accent-alt);
+  }
+
+  b {
+    font-weight: 600;
+  }
+
+  .pfp {
+    width: 14em;
+    height: 14em;
+    background-color: #FAA;
+    
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    transition: 0.36s ease;
+
+    video {
+      z-index: 6;
+      position: absolute;
+      width: 14em;
+      transition: 0.36s ease;
+    }
+
+    img {
+      z-index: 4;
+      position: absolute;
+      width: 14em;
+      transition: 0.36s ease;
+    }
+
+    @media screen and (max-width: 40rem) {
+      margin-top: 1.5rem;
+      width: 8em;
+      height: 8em;
+      video {
+        width: 8em;
+      }
+      img {
+        width: 8em;
+      }
+    }
+  }
+
+  .profile-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 45rem;
+    padding-bottom: 0.5rem;
+    
+    p {
+      padding-left: 1rem;
+    }
+
+  }
+
+  .accent-gradient {
+    background: linear-gradient(to right, var(--accent), var(--accent-alt), var(--accent));
+    background-clip: text;
+    color: transparent;
+  }
+
+  @media screen and (max-width: 40rem) {
+    width: 100%;
+  }
+
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+
+  @media screen and (max-width: 40rem) {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+.card {
+  width: fit-content;
+  padding: 0.4rem 1.6rem 0.4rem 1.6rem;
+  margin: 0.5rem;
+
+  border-radius: var(--boreder-radius);
+  
+  background-color: var(--background-alt);
+
+  box-shadow: 4px 4px;
+
+  transition: 0.36s ease;
+
+  p {
+    transition: 0.36s ease;
+  }
+
+  &:hover {
+    background-color: var(--surface);
+    
+    box-shadow: 16px 16px;
+    transform: translate(-8px, -8px);
+
+    p {
+      color: var(--accent);
+    }
+  }
+
+  .title {
+    font-weight: 600;
+    color: var(--iris);
+  }
+
+  .tag {
+    font-weight: 600;
+
+    &#python {
+      color: transparent;
+      background: linear-gradient(-90deg, #ffde57 50%, #4584b6 50%);
+      background-clip: text;
+    }
+    &#rust {
+      color: #D34516;
+    }
+    &#cpp {
+      color: #f34b7d;
+    }
+    &#javascript {
+      color: #F0DB4F;
+    } 
+    &#css {
+      color: transparent;
+      background: linear-gradient(-90deg, #264de4 50%, #2965f1 50%);
+      background-clip: text;
+    }
+    &#godot {
+      color: #478cbf;
+    }
+
+    &#cli {
+      color: var(--foam);
+    }
+    &#web {
+      color: transparent;
+      background: linear-gradient(-90deg, #e34c26 50%, #f06529 50%);
+      background-clip: text;
+    }
+    &#game {
+      color: var(--iris);
+    }
+  }
+}
+
+.faded {
+  opacity: 0.75;
+  transition: 0.25s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 40rem) {
+    opacity: 1;
+  }
+
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  background-color: var(--background-alt);
+ 
+  div {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    @media screen and (max-width: 40rem) {
+      text-align: center;
+    }
+
+    p {
+      color: var(--secondary-alt);
+      margin: 0.50rem;
+      font-weight: 400;
+    }
+  }
+
+  @media screen and (max-width: 40rem) {
+  }
+}
+
+.center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* hover pop-up */
+
+.hover-input {
+  font-weight: 500;
+  color: var(--secondary);
+}
+
+.hover-output {
+  display: none;
+}
+  
+.hover-input:hover .hover-output {
+  display: inherit;
+}
+
+.hover-output {
+  position: absolute;
+  background-color: var(--surface);
+  border: 2px solid var(--accent-alt);
+  padding: 8px;
+  max-width: 384px;
+  transform-origin: left;
+  translate: -50% 1.5rem;
+  box-shadow: 4px 4px var(--accent);
+  img {
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  @media screen and (max-width: 60rem) {
+    translate: -40% 1.5rem;
+  }
+  @media screen and (max-width: 40rem) {
+    translate: -25% 1.5rem;
+  }
+}
+
+/* === animations */
+
+/* ratationeh! */
+@keyframes spin {
+  from {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+  to {
+    transform: rotate3d(1, 2, 1, 360deg);
+  }
+}
+.spin {
+  animation: spin 4s linear infinite;
+}

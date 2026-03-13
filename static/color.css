@@ -1,0 +1,31 @@
+/* 
+:root {
+  --accent-a: rgb(191, 127, 159);
+  --accent-b: rgb(159, 95, 127);
+  --accent-c: rgb(127, 63, 95);
+  --accent-d: rgb(95, 31, 63);
+  --accent-e: rgb(63, 0, 31);
+
+  --background: #3D1C49;
+  --background-light: #4F315B;
+  --accent: #af3736;
+  --accent-light: #DB4C46;
+  --secondary: #e87027;
+  --secondary-light: #e8bd3b;
+  --foreground: #FDEAEA;
+}
+
+*/
+
+:root {
+  --background: #191724;
+  --background-alt: #26233a;
+  --surface: #1f1d2e;
+  --accent: #eb6f92;
+  --accent-alt: #ebbcba;
+  --secondary: #f6c177;
+  --secondary-alt: #ea9d34;
+  --foreground: #e0def4;
+  --foam: #9ccfd8;
+  --iris: #c4a7e7;
+}
