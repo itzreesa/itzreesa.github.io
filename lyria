@@ -5,6 +5,10 @@ BIN_DIR="$HOME/.local/bin"
 TARBALL_URL="https://github.com/itzreesa/lyria/tarball/main/"
 TARBALL_LOC=$(mktemp)
 
+echo "hey! you should probably install lyria from PyPi using pipx!"
+echo "-> https://github.com/itzreesa/lyria"
+sleep 3
+
 mkdir -p "$LYRIA_DIR"
 mkdir -p "$BIN_DIR"
 
